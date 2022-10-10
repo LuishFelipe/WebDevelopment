@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size: 62.5%
+}
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.section{
+  height: 100vh;
+}
+.main-menu{
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #eee;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.menu{
+  display: flex ;
+  flex-direction: row;
+  flex-wrap: nowrap;  
+}
+.menu li{
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+  font-size: 1.2rem;
+}
+.contact{
+  background-color: aquamarine;
+}
