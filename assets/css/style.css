@@ -1,22 +1,33 @@
+:root{
+  --primary-color: #080520;
+  --white-color: #fff;
+  --light-gray-color: #eee;
+  --secondary-color: crimson;
+  --gap: 3rem;
+}
+
 *{
   margin: 0;
   padding: 0;
 }
-body{
-  font-size: 62.5%
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 h1{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
+  text-transform: uppercase;
 }
-p{
+body{
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+a{
+  text-decoration: none;
 }
 
-.section{
-  height: 100vh;
-}
 .main-menu{
   width: 100%;
   display: flex;
@@ -26,17 +37,129 @@ p{
   justify-content: space-between;
   border-bottom: 1px solid black;
 }
-.menu{
-  display: flex ;
-  flex-direction: row;
-  flex-wrap: nowrap;  
-}
-.menu li{
-  display: block;
-  font-family: 'Roboto', sans-serif;
-  list-style: none;
-  font-size: 1.2rem;
-}
+
 .contact{
   background-color: aquamarine;
 }
+
+.main-bg{
+  background-image: url('../img/scattered-forcefields.svg');
+  background-size: cover;
+  background-position: center center;
+  color: var(--white-color); 
+}
+
+.main-bg{
+  background-image: url('../img/scattered-forcefields.svg');
+  background-size: cover;
+  background-position: center center;
+  color: var(--white-color); 
+}/*classe responsável por setar as configurações no body*/
+
+.white-bg{
+  background-color: var(--white-color); 
+  color: var(--primary-color);
+}
+
+.main-content{
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 10rem var(--gap);
+}/*gerencia as divs principais*/
+
+.section{
+  min-height: 100vh;
+}/*faz com que a página inteira tenha suas configurações*/
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 0.1rem solid var(--light-gray-color);
+  z-index: 1;/*faz com q ele se sobreponha a qualquer coisa*/
+}/*gerencia o meno(barras superiores)*/
+
+.menu-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.menu h1{
+  font-size: 2.3rem;
+  color: var(--primary-color);
+}
+
+.menu h1 a{
+  color: inherit;/*pega a cor do pai(elemento acima)*/
+}
+
+.menu ul{
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li a{
+  display: block;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.menu ul li a::after{
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--secondary-color);
+  transition: all 300ms ease-in-out;/*responsável pelo efeito embaixo das opções no menu*/
+}
+
+.menu ul li a:hover::after{
+  width: 50%;
+  left:25%
+}
+
+.menu-spacing{
+  height: 6.5rem;
+}
+
+.intro-content{
+  position: relative;
+  top: -8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  min-height: 100vh;
+}
+
+.intro-text-content, .intro-img{
+  display: flex;
+  flex-flow:column wrap;
+  justify-content: center;
+}
+.intro-img img{
+  justify-content: right;
+  max-width:40%;
+  min-height: auto;
+}
+/* 
+.intro-content{
+  position: relative;
+  top: -8rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--gap);
+  min-height: 100vh;
+} */
+
+
+
+

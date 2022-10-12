@@ -4,9 +4,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign in</title>
+  <link rel="stylesheet" href="../css/sign_in.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <title>Login Page</title>
 </head>
 <body>
-  <a href="/assets/html/draw.html" target="_blank">roda roda roda</a>
+  <!-- validar no JS...<a href="../html/draw.html" target="_blank">roda roda roda</a>-->
+  <aside>
+    <div id="container">
+
+      <div id="sign_in">
+        <h1>Sign In</h1>
+        <p>Please login to use plataform</p>
+      </div>
+
+      <div class="inputs">
+        <label for="username">username</label>
+        <span class="material-symbols-outlined figuras">person</span>
+        <input id="username" class="box-input" type="text" name="username" required>
+      </div>
+
+      <div class="inputs">
+        <label for="password">password</label>
+        <span class="material-symbols-outlined">lock</span>
+        <input id="password" class="box-input" type="password" name="password" minlength="8" required>
+      </div>
+
+      <div id="forgot">
+        <a href="#">I forgot my password!</a>
+      </div>
+
+      <div>
+        <button id="botao" type="submit">Sign In</button>
+      </div>
+
+      <span>Don't have an account? <a href="sign_up.html" target="_blank">Create a free account</a></span>
+
+      
+      <!--pq q quando rez muito a tela o botão de logar sai do container ao passo que os inputs n?-->
+    </div>
+  </aside>
 </body>
 </html>
+
