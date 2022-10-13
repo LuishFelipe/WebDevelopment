@@ -143,6 +143,7 @@ input{
     border: none;
     width: 50%;
     border-radius: 0.5rem;
+    font-size: 1.5rem;
 }
 input:focus{
     outline: 0.1rem solid #efefef;
@@ -150,4 +151,23 @@ input:focus{
 
 .inp-grupo{
     margin-bottom: 2rem;
+}
+
+#generate{
+    background-color: #2d1b5a;
+    border: none;
+    padding: 1.2rem;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 200ms;
+    width: 100%;
+
+}
+
+#generate:hover{
+    background: #342853;
+
 }
