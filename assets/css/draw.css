@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+     border: 0;
+}
+
+label {
+     cursor: pointer;
+     display: block;
+}
+
+body{
+     font-family: 'Poppins', sans-serif;
+     background: linear-gradient(to left, #19181F, #1E1E26);
+     
+     
+}
+
+/* 
+* Cabeçalho 
+*/
+.menu{
+        padding: 3.2rem;
+        border-bottom: 1px solid #333;
+        background: rgba(0, 0, 0, 0.274); 
+
+}
+
+header div {
+    text-align: center;
+}
+
+header div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 1.6rem;
+    text-decoration: none;
+}
+header div a:hover{
+    
+    color: #e2aa4a;
+    transition: color 200ms;
+    
+}
+
+/* 
+* Body
+*/
+
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    box-shadow: 0 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.274);
+    
+}
+
+.container {
+    background-color: #121214;
+    color: #efefef;
+    width: 100%;
+    margin-bottom: 4rem;
+    width: 60rem;
+
+    min-width: 47rem;
+    padding: 3rem 4rem;
+        
+ }
+    
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.2rem solid #e4e1e1;
+
+}
+
+.add{
+    text-decoration: none;
+    display: inline-block;
+    width: 3rem;
+    background: #8bc34a;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 200ms;
+}
+
+.add:hover{
+    background: #7cb342;
+}
+
+/* 
+* Valores dinâmicos
+*/
+
+.flex{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.delete{
+    text-decoration: none;
+    display: inline-block;
+    background: #f44336;
+    color: #fff;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 3rem;
+    height: 3rem;
+
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 200ms;
+}
+
+.delete:hover{
+    background: #c62828;
+}
+
+input{
+    padding: 0.5rem 1rem;
+    background: #ddd;
+    border: none;
+    width: 50%;
+    border-radius: 0.5rem;
+}
+input:focus{
+    outline: 0.1rem solid #efefef;
+}
+
+.inp-grupo{
+    margin-bottom: 2rem;
+}
