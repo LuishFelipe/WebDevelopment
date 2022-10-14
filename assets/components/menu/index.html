@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="roleta/Winwheel.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
   <link rel="stylesheet" href="../../css/draw.css">
+
   <title>SorteioFast</title>
 </head>
 <body>
@@ -16,24 +19,37 @@
     </div>
   </header>
   
+  <div class="container1">
+    <div class="arrow-container">
+        <img src="../../../resources/arrow.png">
+    </div>
+    <div class="wheel-container">
+        <td width="438" height="582" class="the_wheel">
+            <button onClick="startSpin();" type="button" class="canvas-button">
+                <canvas id="canvas" width="800" height="800"></canvas>
+            </button>
+        </td>
+    </div>
+</div>
   <div class="main">
     <div class="container">
       <div class="cabecalho">
         <h2>Adicionar novo elemento.</h2>
-        <a href="#" class="add">&plus;</a>
       </div>
-      <div class="inp-grupo">
+      <button type="button" href="#" class="collapsible-button">+</button>
+      <div class="content">
+        <form class="js-form">
+            <input autofocus type="text" aria-label="Enter a name to add" placeholder="Enter a name to add" class="js-name-input">
+        </form>
+        <ul class="todo-list js-name-list"></ul>
+        <div class="empty-state">
+        </div>
+      
 
-      </div>
-      <button id="generate">Gerar</button>
 
-    </div>
-    
-    <div>
-      <span>aaa</span>
     </div>
     
   </div>
-  <script src="script.js"></script>
+  <script src="roleta/WheelScript.js"></script>
 </body>
 </html>
