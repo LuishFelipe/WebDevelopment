@@ -12,11 +12,17 @@
 </head>
 <body>
   <header>
-    <div class="menu">
-      <a href="index.html">Sorteio</a>
-      <a href="/">Resultados</a>
-      <a href="/">Contato</a>
+    <div class="nav">
+      <div class="logo">
+        <h1>SorteioFast</h1>
+      </div>
+      <div class="menu">
+        <a href="index.html">Sorteio</a>
+        <a href="/">Resultados</a>
+        <a href="/">Contato</a>
+      </div>
     </div>
+
   </header>
   
   <div class="container1">
@@ -24,7 +30,7 @@
         <img src="../../../resources/arrow.png">
     </div>
     <div class="wheel-container">
-        <td width="438" height="582" class="the_wheel">
+        <td  class="the_wheel">
             <button onClick="startSpin();" type="button" class="canvas-button">
                 <canvas id="canvas" width="800" height="800"></canvas>
             </button>
@@ -44,12 +50,11 @@
         <ul class="todo-list js-name-list"></ul>
         <div class="empty-state">
         </div>
-      
-
-
     </div>
-    
   </div>
+  </div>
+ 
+  
   <script src="roleta/WheelScript.js"></script>
 </body>
 </html>
