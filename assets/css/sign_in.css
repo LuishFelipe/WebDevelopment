@@ -26,12 +26,16 @@ p{
 /*poppins*/
 
 #container {
+     display: grid;
+     min-height: 100vh;
      text-align: center;
      align-items: center;
+     width: 80%;
+     margin: 2 auto;
+     grid-gap: 2.4rem;
+     margin-left: 8%;
+
      background-color: rgba(255, 255, 255, 0.4);
-     width: 60vh;
-     height: 80vh;
-     margin: auto;
      margin-top: 2rem;
      justify-content: center;
      border: 0.3rem solid rgba(255, 255, 255, 0.185);
@@ -48,6 +52,7 @@ p{
      border-radius: 1rem;
      z-index: -1;
 }
+
 
 
 
@@ -94,5 +99,6 @@ p{
 }
 #forgot{
      text-align: right;
-     padding-right: 2rem
+     padding-right: 2rem;
+     
 }

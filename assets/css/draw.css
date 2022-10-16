@@ -41,6 +41,10 @@ header .nav{
       margin: 0.5em 0;
 }
 
+.logo h1 a{
+      color: #FFC300;
+}
+
 .menu{
 
         border-bottom: 0.1rem solid #333;
