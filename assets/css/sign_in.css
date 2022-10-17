@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+}
+
+label {
+     cursor: pointer;
+     display: block;
+}
+
+body{
+     font-family: 'Poppins', sans-serif;
+     min-height: 100vh;
+     background: linear-gradient(to left, #19181F, #1E1E26);
+}
+
+h1{
+     font-size: 2.8rem;
+}
+p{
+     font-size: 1rem;
+}
+
+/*poppins*/
+
+#container {
+     display: grid;
+     min-height: 100vh;
+     text-align: center;
+     align-items: center;
+     width: 80%;
+     margin: 2 auto;
+     grid-gap: 2.4rem;
+     margin-left: 8%;
+
+     background-color: rgba(255, 255, 255, 0.4);
+     margin-top: 2rem;
+     justify-content: center;
+     border: 0.3rem solid rgba(255, 255, 255, 0.185);
+     box-shadow: 0 5rem 3rem rgba(0,0,0, 1);
+     backdrop-filter: blur(8px);
+     border-radius: 1rem;
+}
+#container::before{
+     content: '';
+     position: absolute;
+     background: rgba(255, 255, 255, 0.2);
+     inset: 0;
+     transform: rotate(-5deg);
+     border-radius: 1rem;
+     z-index: -1;
+}
+
+
+
+
+#botao{
+     font-size: 1.5rem;
+     border: none;
+     border-radius: 0.5rem;
+     margin: 2rem;
+     color: #fff;
+     background: #000;
+}
+#botao:hover{
+     background-color: rgba(0, 0, 0, 0.706);
+}
+
+.inputs{
+     font-size: 1.4rem;
+     margin: 2rem;
+     /*confi das fonts das letras*/
+}
+#inputs input:focus{
+     background:#f0f;
+}
+
+.box-input{
+     padding: 0.5rem;
+     margin-bottom: 0.5rem;
+     border: none;
+     border-radius: 0.5rem;
+     font-size: 1.2rem;
+}
+
+#sign_in{
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+     /*config das letras*/
+}
+#botao{
+     font-size: 1.4rem;
+     width: 20rem;
+     height: 3rem;
+     border-radius: 5rem;
+     margin-bottom: 5rem;
+}
+#forgot{
+     text-align: right;
+     padding-right: 2rem;
+     
+}

@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600&display=swap');
+
+/* Reiniciando a págica */
+
+:root{
+  --primary-color: #19181F;
+  --white-color: #fff;
+  --light-gray-color: #eee;
+  --secondary-color: #1E1E26;
+  --gap: 3rem;
+}
+
+*{
+     margin: 0;
+     padding: 0;
+     border: 0;
+     box-sizing: none;
+}
+
+html{
+  font-size: 70.5%;
+}
+
+label {
+     cursor: pointer;
+     display: block;
+}
+
+body{
+     font-family: 'Poppins', sans-serif;
+     background: linear-gradient(to left, #19181F, #1E1E26);
+     font-size: 2rem;
+     line-height: 1.5rem;
+     
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+h2{
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+h3{
+  font-size: 5rem;
+}
+h4{
+  font-size: 4.5rem;
+}
+h5{
+  font-size: 4rem;
+}
+h6{
+  font-size: 3.5rem;
+}
+a{
+  text-decoration: none;
+}
+p{
+  margin-bottom: 3rem;
+}
+
+
+
+/* 
+* Cabeçalho 
+*/
+.intro-color{
+  font-size: 6rem;
+  text-transform: uppercase;
+  
+}
+.main-bg{
+  background-size: cover;
+  background-position: center center;
+  color: var(--white-color); 
+}
+
+.black-bg{
+  background-color: #19181F; 
+  color: var(--primary-color);
+}
+
+.main-content{
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 10rem var(--gap);
+}
+
+.section{
+  min-height: 100vh;
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 0.1rem solid var(--light-gray-color);
+  z-index: 1;/*faz com q ele se sobreponha a qualquer coisa*/
+}
+
+.menu-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.menu h1{
+  font-size: 5rem;
+  color: var(--primary-color);
+}
+
+.menu h1 a{
+  color: #fff;/*pega a cor do pai(elemento acima)*/
+}
+
+.menu ul{
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li a{
+  display: block;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: var(--white-color);
+  position: relative;
+}
+
+.menu ul li a::after{
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: yellow;
+  transition: all 300ms ease-in-out;/*responsável pelo efeito embaixo das opções no menu*/
+}
+
+.menu ul li a:hover::after{
+  width: 50%;
+  left:25%
+}
+
+.menu-spacing{
+  height: 6.5rem;
+}
+
+/* 
+* Body
+*/
+
+.main{
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    box-shadow: 0 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.274);
+    
+}
+
+.container {
+    background-color: #121214;
+    color: #efefef;
+    width: 100%;
+    margin-bottom: 4rem;
+    width: 70%;
+
+
+    padding: 3rem 4rem;
+        
+ }
+
+ .container1{
+    width: 50%;
+    margin: 0 auto;
+    /* Flex rules */
+    display: flex;
+    padding-top: 3rem;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+ }
+    
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.2rem solid #e4e1e1;
+
+}
+
+.add{
+    text-decoration: none;
+    display: inline-block;
+    width: 3rem;
+    background: #8bc34a;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 200ms;
+}
+
+.add:hover{
+    background: #7cb342;
+}
+
+/* 
+* Valores dinâmicos
+*/
+
+.flex{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.delete{
+    text-decoration: none;
+    display: inline-block;
+    background: #f44336;
+    color: #fff;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 3rem;
+    height: 3rem;
+
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 200ms;
+}
+
+.delete:hover{
+    background: #c62828;
+}
+
+input{
+    padding: 0.5rem 1rem;
+    background: #ddd;
+    border: none;
+    width: 60%;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+input:focus{
+    outline: 0.1rem solid #efefef;
+}
+
+.inp-grupo{
+    margin-bottom: 2rem;
+}
+
+#generate{
+    background-color: #2d1b5a;
+    border: none;
+    padding: 1.2rem;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 200ms;
+    width: 100%;
+
+}
+
+#generate:hover{
+    background: #342853;
+
+}
+
+#canvas{
+  width: 60em;
+    height: 60rem;
+}
+
+.canvas-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    
+
+  }
+  
+  /* Style the button that is used to open and close the collapsible content */
+  .collapsible-button{
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 1rem;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    width: 20rem;
+    padding: 0 1.8rem;
+    display: none;
+    overflow: hidden;
+  }
+
+  .the_wheel{
+    width: 43rem;
+     height: 58rem;
+  }
+  
+  .todo-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  span {
+    border-radius: 0.4rem;
+    vertical-align: text-top;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.6rem;
+  }
+  
+  li{
+    padding-top: 1rem;
+  }
+  
+  .delete-todo {
+    vertical-align: middle;
+  }
+  
+  input[type="image" i] {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .delete-button {
+    color: red;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-weight: bold;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    border: 0.3rem solid #000;
+  }
+  
+  /* Add this below all the other styles */
+  .empty-state {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+  .checklist-icon {
+    margin-bottom: 2rem;
+  }
+  
+  .empty-state__title, .empty-state__description {
+    margin-bottom: 2;
+  }
+  
+  /* Add this below the other styles */
+  .todo-list:empty {
+    display: none;
+  }
+  
+  .todo-list:empty + .empty-state {
+    display: flex;
+  }
+
+  .img {
+    text-align: center;
+    width: 100%;
+    margin-top: 0.8rem;
+    padding-top: 11.2rem;
+    position:absolute;
+    top:0px;
+  }
+
+  .close-menu{
+    display: none;
+  }
+
+  .js-name-input{
+    font-size: 2rem;
+    
+  }
+
+  .content{
+    min-width: 50%;
+  }
+
+
+  @media (max-width: 800px) {
+     h1{
+      margin-left: 20rem;
+      margin-bottom: 5rem;
+     }
+    
+    h1, h2, p, input{
+        font-size: 3rem;
+         width: 100%;
+         max-width: 100%;
+         
+    }
+
+    .intro-content, .grid{
+         grid-template-columns: 1fr;
+    }
+
+  
+    .menu-content, .menu-content ul{
+         flex-direction: column;
+         justify-content: center;
+    }
+    .menu-content{
+         height: 100vh;
+    }
+    .menu{
+         display: none;
+    } 
+
+    .close-menu-label::after{
+         content: '☰';
+         position: fixed;
+         z-index: 2;
+         top: 2rem;
+         right: 2rem;
+         background: var(--primary-color);
+         color: var(--white-color);
+         font-size: 3rem;
+         line-height: 3rem;
+         width: 3rem;
+         height: 3rem;
+         text-align: center;
+         padding: 0.5rem;
+         cursor: pointer;
+    }
+    .close-menu:checked~.menu{
+         display: block;
+         
+    }
+    .close-menu:checked~.close-menu-label::after{
+         display: block;
+         content: '×';
+    }
+    .menu-spacing{
+         height: 0;
+    }
+
+    .js-name-input{
+      font-size: 2rem;
+      
+    }
+
+    .content{
+      min-width: 70%;
+    }
+}
+  
+.white-bg{
+  background: #fff;
+}
+.heart{
+  color: #f00;
+  font-size: 2rem;
+
+}
+#footer{
+  padding: 10px;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;  
+}
