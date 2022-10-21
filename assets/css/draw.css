@@ -587,3 +587,7 @@ body .full-width{
 .form-group ::placeholder{
   color: #eee;
 }
+
+.heart{
+  margin-top: 20rem;
+}
