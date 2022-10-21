@@ -17,7 +17,7 @@
           <label class="close-menu-label" for="close-menu" title="close-menu"></label>
           <aside class="menu black-bg">
                <div class="main-content menu-content">
-                    <h1 onclick="getElementById('close-menu').checked = false;"><a href="#home">SorteioFast</a></h1>
+                    <h1 onclick="getElementById('close-menu').checked = false;"><a href="#home"><b class="color-title">Sorteio</b>Fast</a></h1>
                     <nav>
                          <ul onclick="getElementById('close-menu').checked = false;">
                               <li><a href="#Sorteio">Sorteio</a></li>
@@ -62,10 +62,39 @@
   </div>
   </div>
  
-  <footer id="footer" class="white-bg">
-    <p>Feito com <span class="heart">❤</span> por<a rel="nofollow" target="_blank" href="https://github.com/GustavoBarbosa08/"> Gustavo </a> <a  target="_blank" href="https://github.com/LuishFelipe">Luís</a> <a target="_blank" href="https://github.com/nataovaz">Natan</a></p>
-  </footer> <!--falta fazer o media query aqui-->
   
-  <script src="roleta/WheelScript.js"></script>
+  
+  <div class="contact-form">
+    <fieldset class="form-grid">
+      <legend>Contact me</legend>
+         <div class="form-group">
+              <label for="first-name">First name</label>
+              <input type="text" name="first-name" id="first-name" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" name="last-name" id="last-name" placeholder="Your last name">
+            </div>
+            <div class="form-group">
+              <label for="E-mail">E-mail</label>
+              <input type="text" name="E-mail" id="E-mail" placeholder="Your e-mail">
+            </div>
+            <div class="form-group full-width">
+              <label for="messege">Messege</label>
+              <textarea name="messege" id="messege" placeholder="Your messege"></textarea>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit">Send messege</button>
+            </div>
+          </fieldset>
+        </div>
+
+        
+        <footer id="footer" class="white-bg">
+          <p>Feito com <span class="heart">❤</span> por<a rel="nofollow" target="_blank" href="https://github.com/GustavoBarbosa08/"> Gustavo </a> <a  target="_blank" href="https://github.com/LuishFelipe">Luís</a> <a target="_blank" href="https://github.com/nataovaz">Natan</a></p>
+        </footer> <!--falta fazer o media query aqui-->
+
+
+        <script src="roleta/WheelScript.js"></script>
 </body>
 </html>
