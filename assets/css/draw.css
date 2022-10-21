@@ -503,14 +503,10 @@ input:focus{
 .white-bg{
   background: #fff;
 }
-.heart{
-  color: #f00;
-  font-size: 2rem;
-
-}
 #footer{
   padding: 10px;
   text-align: center;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;  
 }
@@ -520,74 +516,14 @@ input:focus{
 
 
 /*----------------------------------------------------*/
-.contact-form{
-  grid-column: span 2; 
-}
 
-.contact-form .form-grid{
-  border:none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
 
-.form-grid legend{
-  font-style: italic;
-  font-size: 1.6rem;
-  margin-bottom: 3rem;
-}
-
-.form-group{
-  flex: 1 1  40rem;
-}
-.form-group label{
-  display: block;
-  margin-bottom: 1rem;
-}
-.form-group input, .form-group textarea{
-  border: none;
-  background: #fff;
-  padding: 1.5rem 2rem;
-  width: 80%;
-  font-size: 3rem;
-  box-sizing: border-box;
-  margin-left: 2rem;
-}
-.form-group input:focus, .form-group textarea:focus{
-  box-shadow: 0 0 1.5rem 0.5rem #121214;
-
-}
-.form-group textarea{
-  height: 20rem;
-  
-}
-
-body .full-width{
-  width: 100%;
-  flex: 1 1 100%;
-}
-
-.form-group button{
-  border: 0.5rem solid #fff;
-  background: none;
-  color: #fff;
-  padding: 1.5rem 2rem;
-  font-size: 3rem;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-  margin-bottom: 5rem;
-}
-.form-group button:hover{
-  background: #fff;
-  color: #000;;
-
-}
-
-.form-group ::placeholder{
-  color: #eee;
+.rodapeP{
+  margin-top: 2rem;
 }
 
 .heart{
-  margin-top: 20rem;
+  color: #f00;
+  font-size: 2rem;
+
 }

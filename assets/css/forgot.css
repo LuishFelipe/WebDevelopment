@@ -18,7 +18,6 @@ body{
 
 h1{
      font-size: 2.8rem;
-     margin-top: -5rem;
 }
 p{
      font-size: 1rem;
@@ -27,13 +26,11 @@ p{
 /*poppins*/
 
 #container {
-     display: grid;
      min-height: 100vh;
      text-align: center;
      align-items: center;
      width: 50%;
      margin: 2 auto;
-     grid-gap: 2.4rem;
      margin-left: 24%;
 
      background-color: rgba(255, 255, 255, 0.4);
@@ -71,7 +68,7 @@ p{
 
 .inputs{
      font-size: 1.4rem;
-     margin: 2rem;
+     margin-bottom: 6rem;
      /*confi das fonts das letras*/
 }
 
@@ -85,8 +82,8 @@ p{
 }
 
 #sign_in{
-     margin-top: 1rem;
-     margin-bottom: 2rem;
+     margin-top: 6rem;
+     margin-bottom: 6rem;
      /*config das letras*/
 }
 #botao{
@@ -94,10 +91,5 @@ p{
      width: 20rem;
      height: 3rem;
      border-radius: 5rem;
-     margin-bottom: 3rem;
-}
-#forgot{
-     text-align: right;
-     padding-right: 2rem;
-     
+     margin-bottom: 2rem;
 }

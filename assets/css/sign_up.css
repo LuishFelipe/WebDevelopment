@@ -18,7 +18,7 @@ body{
 
 h1{
      font-size: 2.8rem;
-     margin-top: -5rem;
+     margin-top: 2rem;
 }
 p{
      font-size: 1rem;
@@ -30,14 +30,12 @@ p{
      display: grid;
      min-height: 100vh;
      text-align: center;
-     align-items: center;
      width: 50%;
      margin: 2 auto;
-     grid-gap: 2.4rem;
+     grid-gap: none;
      margin-left: 24%;
 
      background-color: rgba(255, 255, 255, 0.4);
-     margin-top: 2rem;
      justify-content: center;
      border: 0.3rem solid rgba(255, 255, 255, 0.185);
      box-shadow: 0 5rem 3rem rgba(0,0,0, 1);
@@ -61,7 +59,7 @@ p{
      font-size: 1.5rem;
      border: none;
      border-radius: 0.5rem;
-     margin: 2rem;
+     margin: 1rem;
      color: #fff;
      background: #000;
 }
@@ -71,7 +69,8 @@ p{
 
 .inputs{
      font-size: 1.4rem;
-     margin: 2rem;
+     margin: -6rem;
+     align-items: center;
      /*confi das fonts das letras*/
 }
 
@@ -82,11 +81,14 @@ p{
      border: none;
      border-radius: 0.5rem;
      font-size: 1.2rem;
+     align-items: center;
 }
 
 #sign_in{
-     margin-top: 1rem;
+     margin-top: 2rem;
      margin-bottom: 2rem;
+     align-items: center;
+     margin-bottom: 8rem;
      /*config das letras*/
 }
 #botao{
@@ -94,10 +96,10 @@ p{
      width: 20rem;
      height: 3rem;
      border-radius: 5rem;
-     margin-bottom: 3rem;
+     margin-bottom: -5rem;
+     align-items: center;
 }
-#forgot{
-     text-align: right;
-     padding-right: 2rem;
-     
+
+span .signIn {
+     margin: 0;
 }
