@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="../../css/sign_in.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  
-  <title>SorteioFast │ Login</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <title>SorteioFast │ Login</title> 
 </head>
 <body>
   <!-- validar no JS...<a href="../html/draw.html" target="_blank">roda roda roda</a>-->
@@ -16,16 +17,16 @@
 
   
         <div>
-          <form>
+          <form action="#">
           <div id="sign_in">
             <h1>Seja bem vindo(a) a SorteioFast!</h1>
             <p>Preencha os campos para ter acesso ao site.</p>
           </div>
-    
+
           <div class="inputs">
-            <label for="username">username</label>
-            <span class="material-symbols-outlined figuras">person</span>
-            <input id="username" class="box-input" type="text" name="username" required>
+            <label for="email">email</label>
+            <span class="material-symbols-outlined">mail</span>
+            <input id="email" class="box-input" type="email" name="email" required>
           </div>
     
           <div class="inputs">
@@ -51,5 +52,6 @@
       <!--pq q quando rez muito a tela o botão de logar sai do container ao passo que os inputs n?-->
     </div>
 </body>
+<script defer src="users/function_user.js"></script>
 </html>
 
