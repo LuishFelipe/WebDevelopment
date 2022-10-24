@@ -3,30 +3,26 @@ const TEXT_FONT_SIZE = 50;
 
 // Create new wheel object specifying the parameters at creation time.
 let theWheel = new Winwheel({
-    'numSegments': 14,     // Specify number of segments.
+    'numSegments': 10,     // Specify number of segments.
     'outerRadius': WHEEL_RADIUS,   // Set outer radius so wheel fits inside the background.
     'textFontSize': TEXT_FONT_SIZE,    // Set font size as desired.
     'segments':        // Define segments including colour and text.
         [
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Gabriel', id: Math.floor(Math.random() * Date.now()) },
+            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Perdeu', id: Math.floor(Math.random() * Date.now()) },
             { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Gustavo', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Eduardo', id: Math.floor(Math.random() * Date.now()) },
+            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Perdeu', id: Math.floor(Math.random() * Date.now()) },
             { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Guilherme', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Luiz', id: Math.floor(Math.random() * Date.now()) },
+            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Perdeu', id: Math.floor(Math.random() * Date.now()) },
             { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Oziel', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Geziel', id: Math.floor(Math.random() * Date.now()) },
+            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Perdeu', id: Math.floor(Math.random() * Date.now()) },
             { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Danyel', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Marcos', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'João Vitor', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Leonardo', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Willian', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Celomar', id: Math.floor(Math.random() * Date.now()) },
-            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Pablo', id: Math.floor(Math.random() * Date.now()) },
-        ].sort( () => Math.random() - 0.5),
+            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Perdeu', id: Math.floor(Math.random() * Date.now()) },
+            { fillStyle: '#' + Math.floor(Math.random()*16777215).toString(16), text: 'Natan', id: Math.floor(Math.random() * Date.now()) },
+        ],
     'animation':           // Specify the animation to use.
     {
         'type': 'spinToStop',
-        'duration': 15,
+        'duration': 5,
         'spins': 8,
         'callbackFinished': alertPrize,
     }
@@ -44,8 +40,29 @@ function randomizeSegments() {
 function alertPrize(indicatedSegment) {
     // Do basic alert of the segment text.
     // You would probably want to do something more interesting with this information.
-    alert("The winner is: " + indicatedSegment.text);
+    if(indicatedSegment.text == 'Perdeu'){
+        alert("Que pena, nao foi dessa vez");
+    }else {
+        alert("Voce venceu, seu premio é: " + indicatedSegment.text);
+    }
+    saveSegment(indicatedSegment);
     resetWheel();
+}
+
+function saveSegment(indicatedSegment) {
+    let user = JSON.parse(localStorage.getItem('user'));
+    for (var i = 0; i < user.length; i++) {
+        if(user[i].token == true){
+            let sorteio = {
+                result: indicatedSegment.text,
+            }
+            sorteio = JSON.stringify(sorteio);
+            user[i].sorteio.push(JSON.parse(sorteio));
+            localStorage.setItem('user', JSON.stringify(user));
+            return;
+        }
+    }
+    return;
 }
 
 // =======================================================================================================================

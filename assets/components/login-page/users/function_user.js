@@ -1,4 +1,3 @@
-let verify = "user";
 
 function createUser(){
   const username = document.getElementById("username").value;
@@ -7,93 +6,92 @@ function createUser(){
   const confirmasenha = document.getElementById("password2").value;
   
   let user = {
-    "username": "",
-    "email": "",
-    "senha": "",
-    "token": false,
-    "sorteio": [{
-      "result": "",
+    username: "",
+    email: "",
+    senha: "",
+    token: false,
+    sorteio: [{
+      result: "",
     }]
   }
+  user.username = username;
+  user.email = email;
+  user.senha = senha;
+
+  let arrayUser = [];
+
 
   //confirmacao de senha
   if(senha != confirmasenha){
     return alert("Senhas divergentes!")
   }
 
-  user.username = username;
-  user.email = email;
-  user.senha = senha;
-
-  if(!isKey(verify)) {
-    localStorage.setItem(verify, JSON.stringify(user));
+  if(!isKey()) {
+    arrayUser.push(user);
+    localStorage.setItem("user", JSON.stringify(arrayUser));
     return console.log(user);
   }
   
-  if(existingEmail(verify, email)){
+  if(existingEmail(email)){
     return alert("Email já existente!"); 
   }
 
-  let x = localStorage.length;
-  verify = verify + toString(x);
-  localStorage.setItem(verify, JSON.stringify(user));
-  
-  return console.log(user);
+  let aux = localStorage.getItem("user");
+  let newUser = JSON.parse(aux);
+  newUser.push(user);
+  localStorage.setItem("user", JSON.stringify(newUser));
 }
 
 function loginUser() {
   const email = document.getElementById("email").value;
   const senha = document.getElementById("password").value;
 
-  if(!isKey(verify)) {
+  if(!isKey()) {
     return alert("Nenhum registro ainda");
   }
 
-  if(!existingEmail(verify, email)){
+  if(!existingEmail(email)){
     return alert("Conta/email não cadastrado!"); 
   }
   
-  return alert(acessAccount(verify, email, senha));
+  return;
   
 }
 
 //Verifica a existência da chave user em localStorage 
-function isKey(value) {
+function isKey() {
   for (var i = 0; i < localStorage.length; i++) {
-    for (var j = 0; j < localStorage.length; j++) {
-      if(value == localStorage.key(j)){
-        return true;
-      }
+    if(localStorage.key(i) == "user"){
+      return true
     }
-    value = value + toString(i);
   }
   return false
 }
 
 //Verifica a existência de um email ja existente na chave user
-function existingEmail(value, email) {
-  for (var i = 0; i < localStorage.length; i++) {
-    let localUser = JSON.parse(localStorage.getItem(value));
-    if(localUser.email == email){
+function existingEmail(email) {
+  var aux = localStorage.getItem("user");
+  var userStorage = JSON.parse(aux);
+  for (var i = 0; i < userStorage.length; i++) {
+    if(userStorage[i].email == email){
       return true;
     }
-    value = value + toString(i);
   }
   return false;
 }
 
 
-function acessAccount(value, email, senha) {
-  for (var i = 0; i < localStorage.length; i++) {
-    let localUser = JSON.parse(localStorage.getItem(value));
-    if(localUser.email == email){
-      if(localUser.senha == senha){
-        localUser.token = true;
-        localStorage.setItem(value, JSON.stringify(localUser));
-        return localUser;
+function acessAccount(email, senha) {
+  var userStorage = JSON.parse(localStorage.getItem("user"));
+  for (var i = 0; i < userStorage.length; i++) {
+    if(userStorage[i].email == email){
+      if(userStorage[i].senha == senha){
+        userStorage[i].token = true;
+        localStorage.setItem("user", JSON.stringify(userStorage));
+        return userStorage[i];
       }
+      var error = "senha invalida"
+      return error;
     }
-    value = value + toString(i);
   }
-  return null;
 }
