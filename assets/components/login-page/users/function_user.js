@@ -54,7 +54,7 @@ function loginUser() {
     return alert("Conta/email não cadastrado!"); 
   }
   
-  return;
+  return acessAccount(email, senha);
   
 }
 

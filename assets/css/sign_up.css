@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600&display=swap');
-
+:root{
+     --primary-color: #19181F;
+     --white-color: #fff;
+     --light-gray-color: #eee;
+     --secondary-color: #1E1E26;
+     --gap: 3rem;
+}
 *{
      margin: 0;
      padding: 0;
@@ -23,6 +29,9 @@ h1{
 p{
      font-size: 1rem;
 }
+a{
+     text-decoration: none;
+}
 
 /*poppins*/
 
@@ -30,9 +39,10 @@ p{
      display: grid;
      min-height: 100vh;
      text-align: center;
+     align-items: center;
      width: 50%;
      margin: 2 auto;
-     grid-gap: none;
+     grid-gap: 5rem;
      margin-left: 24%;
 
      background-color: rgba(255, 255, 255, 0.4);
@@ -82,6 +92,7 @@ p{
      border-radius: 0.5rem;
      font-size: 1.2rem;
      align-items: center;
+     max-width: 50%;
 }
 
 #sign_in{
@@ -98,8 +109,100 @@ p{
      border-radius: 5rem;
      margin-bottom: -5rem;
      align-items: center;
+     max-width: 80%;
 }
 
 span .signIn {
      margin: 0;
+}
+
+.intro-color{
+     font-size: 6rem;
+     text-transform: uppercase;
+     
+   }
+   .main-bg{
+     background-size: cover;
+     background-position: center center;
+     color: var(--white-color); 
+   }
+   
+   .black-bg{
+     background-color: #25232c; 
+     color: var(--primary-color);
+   }
+   
+   .main-content{
+     max-width: 120rem;
+     margin: 0 auto;
+     padding: 10rem var(--gap);
+   }
+   
+   .section{
+     min-height: 100vh;
+   }
+   
+   .menu{
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     border-bottom: 0.1rem solid var(--light-gray-color);
+     z-index: 1;/*faz com q ele se sobreponha a qualquer coisa*/
+   }
+   
+   .menu-content{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding-top: 0;
+     padding-bottom: 0;
+   }
+   
+   .menu h1{
+     font-size: 3rem;
+     color: var(--primary-color);
+     margin-top: 0rem;
+   }
+   
+   .menu h1 a{
+     color: #fff;/*pega a cor do pai(elemento acima)*/
+   }
+   
+   .menu ul{
+     list-style: none;
+     display: flex;
+   }
+   
+   .menu ul li a{
+     display: block;
+     padding: 1.2rem;
+     font-size: 1.4rem;
+     color: var(--white-color);
+     position: relative;
+   }
+   
+   .menu ul li a::after{
+     content: '';
+     position: absolute;
+     bottom: 1rem;
+     left: 50%;
+     width: 0;
+     height: 0.2rem;
+     background: yellow;
+     transition: all 300ms ease-in-out;/*responsável pelo efeito embaixo das opções no menu*/
+   }
+   
+   .menu ul li a:hover::after{
+     width: 50%;
+     left:25%
+   }
+   
+   .menu-spacing{
+     height: 6.5rem;
+   }
+
+   .color-title{
+     color: yellow;
 }

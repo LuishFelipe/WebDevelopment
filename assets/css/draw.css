@@ -84,7 +84,7 @@ p{
 }
 
 .black-bg{
-  background-color: #19181F; 
+  background-color: #25232c; 
   color: var(--primary-color);
 }
 
@@ -510,6 +510,7 @@ input:focus{
   flex-direction: row;
   flex-wrap: wrap;  
 }
+
 .color-title{
   color: yellow;
 }

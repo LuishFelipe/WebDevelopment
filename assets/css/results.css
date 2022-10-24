@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600&display=swap');
 :root{
      --primary-color: #19181F;
      --white-color: #fff;
@@ -11,102 +10,46 @@
      padding: 0;
 }
 
-label {
-     cursor: pointer;
-     display: block;
-}
-
 body{
+     background-color: #141317;
+     color: #fff;
      font-family: 'Poppins', sans-serif;
-     min-height: 100vh;
-     background: linear-gradient(to right, #000000, #6f6363);
 }
 
-h1{
-     font-size: 2.8rem;
+table{
+     align-items: center;
+     justify-content: center;
+     border-collapse: collapse;
+     min-width: 20rem;
+     width: 60%;
+     margin-top: 6%;
+     margin-left: 20%;
 }
-p{
+table th{
+     font-size: 2rem;
+}
+table td{
      font-size: 1rem;
+}
+table caption{
+     font-style: italic;
+     font-size: 1rem;
+     text-align: left;
+     margin-bottom: 1.5rem;
+}
+table td, table th {
+     white-space: nowrap;
+     padding: 1rem;
+     text-align: left;
+     border: 0.1rem solid yellow;
 }
 a{
      text-decoration: none;
 }
-
-/*poppins*/
-
-#container {
-     min-height: 100vh;
-     text-align: center;
-     align-items: center;
-     width: 50%;
-     margin: 2 auto;
-     margin-left: 24%;
-
-     background-color: rgba(255, 255, 255, 0.4);
-     margin-top: 2rem;
-     justify-content: center;
-     border: 0.3rem solid rgba(255, 255, 255, 0.185);
-     box-shadow: 0 5rem 3rem rgba(0,0,0, 1);
-     backdrop-filter: blur(8px);
-     border-radius: 1rem;
+.responsive-table{
+     overflow: hidden;
+     overflow-x: auto;
 }
-#container::before{
-     content: '';
-     position: absolute;
-     background: rgba(255, 255, 255, 0.2);
-     inset: 0;
-     transform: rotate(-5deg);
-     border-radius: 1rem;
-     z-index: -1;
-}
-
-
-
-
-#botao{
-     font-size: 1.5rem;
-     border: none;
-     border-radius: 0.5rem;
-     margin: 2rem;
-     color: #fff;
-     background: #000;
-}
-#botao:hover{
-     background-color: rgba(0, 0, 0, 0.706);
-}
-
-.inputs{
-     font-size: 1.4rem;
-     margin-bottom: 6rem;
-     /*confi das fonts das letras*/
-}
-
-
-.box-input{
-     padding: 0.5rem;
-     margin-bottom: 0.5rem;
-     border: none;
-     border-radius: 0.5rem;
-     font-size: 1.2rem;
-     max-width: 50%;
-
-}
-
-#sign_in{
-     margin-top: 6rem;
-     margin-bottom: 6rem;
-     /*config das letras*/
-}
-#botao{
-     font-size: 1.4rem;
-     width: 20rem;
-     height: 3rem;
-     border-radius: 5rem;
-     margin-bottom: 2rem;
-     max-width: 80%;
-
-}
-
 .intro-color{
      font-size: 6rem;
      text-transform: uppercase;
