@@ -1,0 +1,142 @@
+:root{
+     --primary-color: #19181F;
+     --white-color: #fff;
+     --light-gray-color: #eee;
+     --secondary-color: #1E1E26;
+     --gap: 3rem;
+}
+*{
+     margin: 0;
+     padding: 0;
+}
+
+body{
+     background-color: #141317;
+     color: #fff;
+     font-family: 'Poppins', sans-serif;
+}
+
+table{
+     align-items: center;
+     justify-content: center;
+     border-collapse: collapse;
+     min-width: 20rem;
+     width: 60%;
+     margin-top: 6%;
+     margin-left: 20%;
+}
+table th{
+     font-size: 2rem;
+}
+table td{
+     font-size: 1rem;
+}
+table caption{
+     font-style: italic;
+     font-size: 1rem;
+     text-align: left;
+     margin-bottom: 1.5rem;
+}
+table td, table th {
+     /* white-space: nowrap; */
+     padding: 1rem;
+     text-align: left;
+     border: 0.1rem solid yellow;
+}
+a{
+     text-decoration: none;
+}
+.responsive-table{
+     overflow: hidden;
+     overflow-x: auto;
+}
+.intro-color{
+     font-size: 6rem;
+     text-transform: uppercase;
+     
+   }
+   .main-bg{
+     background-size: cover;
+     background-position: center center;
+     color: var(--white-color); 
+   }
+   
+   .black-bg{
+     background-color: #25232c; 
+     color: var(--primary-color);
+   }
+   
+   .main-content{
+     max-width: 120rem;
+     margin: 0 auto;
+     padding: 10rem var(--gap);
+   }
+   
+   .section{
+     min-height: 100vh;
+   }
+   
+   .menu{
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     border-bottom: 0.1rem solid var(--light-gray-color);
+     z-index: 1;/*faz com q ele se sobreponha a qualquer coisa*/
+   }
+   
+   .menu-content{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding-top: 0;
+     padding-bottom: 0;
+   }
+   
+   .menu h1{
+     font-size: 3rem;
+     color: var(--primary-color);
+     margin-top: 0rem;
+   }
+   
+   .menu h1 a{
+     color: #fff;/*pega a cor do pai(elemento acima)*/
+   }
+   
+   .menu ul{
+     list-style: none;
+     display: flex;
+   }
+   
+   .menu ul li a{
+     display: block;
+     padding: 1.2rem;
+     font-size: 1.4rem;
+     color: var(--white-color);
+     position: relative;
+   }
+   
+   .menu ul li a::after{
+     content: '';
+     position: absolute;
+     bottom: 1rem;
+     left: 50%;
+     width: 0;
+     height: 0.2rem;
+     background: yellow;
+     transition: all 300ms ease-in-out;/*responsável pelo efeito embaixo das opções no menu*/
+   }
+   
+   .menu ul li a:hover::after{
+     width: 50%;
+     left:25%
+   }
+   
+   .menu-spacing{
+     height: 6.5rem;
+   }
+
+   .color-title{
+     color: yellow;
+}

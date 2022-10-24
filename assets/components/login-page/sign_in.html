@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/sign_in.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <title>SorteioFast │ Login</title> 
+</head>
+<body>
+  <!-- validar no JS...<a href="../html/draw.html" target="_blank">roda roda roda</a>-->
+  <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close manu" role="button">
+  <label class="close-menu-label" for="close-menu" title="close-menu"></label>
+  <aside class="menu black-bg">
+       <div class="main-content menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;"><a href="../menu/index.html"><b class="color-title">Sorteio</b>Fast</a></h1>
+            <nav>
+                 <ul onclick="getElementById('close-menu').checked = false;">
+                      <li><a href="#Sorteio">Sorteio</a></li>
+                      <li><a href="../menu/resultados.html">Resultados</a></li>
+                      <li><a href="./../login-page/sign_in.html" target="_blanck">Sign In</a></li>
+                      <li><a href="./../login-page/sign_up.html" target="_blanck">Sign up</a></li>
+
+                 </ul>
+            </nav>
+       </div>
+  </aside>
+
+  <div id="container">
+
+  
+        <div>
+            <form action="#">
+              <div id="sign_in">
+                <h1>Seja bem vindo(a) a SorteioFast!</h1>
+                <p>Preencha os campos para ter acesso ao site.</p>
+              </div>
+
+              <div class="inputs">
+                <label for="email">email</label>
+                <span class="material-symbols-outlined">mail</span>
+                <input id="email" class="box-input" type="email" name="email" required>
+              </div>
+        
+              <div class="inputs">
+                <label for="password">password</label>
+                <span class="material-symbols-outlined">lock</span>
+                <input id="password" class="box-input" type="password" name="password" minlength="8" required>
+              </div>
+        
+              <div id="forgot">
+                <a href="forgot-password.html" target="_self">Esqueceu a senha? Clique aqui.</a>
+              </div>
+        
+              <div>
+                <button id="botao" type="submit" onclick="loginUser()">Login</button>
+              </div>
+        
+              <span>Não possui uma conta? <a href="sign_up.html" target="_self">Crie uma nova conta</a></span>
+            
+            </form>
+        </div>
+      
+
+      
+      <!--pq q quando rez muito a tela o botão de logar sai do container ao passo que os inputs n?-->
+  </div>
+</body>
+<script defer src="users/function_user.js"></script>
+</html>
+
