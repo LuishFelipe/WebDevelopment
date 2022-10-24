@@ -38,7 +38,7 @@ table caption{
      margin-bottom: 1.5rem;
 }
 table td, table th {
-     white-space: nowrap;
+     /* white-space: nowrap; */
      padding: 1rem;
      text-align: left;
      border: 0.1rem solid yellow;
